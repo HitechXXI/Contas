@@ -1,0 +1,21 @@
+#:import utils kivy.utils
+<TelaInicial>
+    FloatLayout:
+        rows: 2
+        columns: 1
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#001824")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Image:
+            pos_hint: {"right": 0.70, "top": 0.95}
+            size_hint: 0.4, 0.3
+            source: "icones/logo.png"
+            id: foto_perfil
+        Button:
+            text: "Obter dados"
+            pos_hint: {"right": 0.60, "top": 0.20}
+            size_hint: 0.2, 0.1
+            on_release: app.pegar_dados()
